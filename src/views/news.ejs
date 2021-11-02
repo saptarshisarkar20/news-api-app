@@ -1,0 +1,22 @@
+<%- include('./partials/header.ejs') %>
+<body>
+    <header class="header">
+        <div class="header__logo">SS News</div>
+        <%- include('./partials/search.ejs') %>
+    </header>
+
+    <div class="wrapper">
+        <div class="news">
+            <% if(articles != null) { %> <% articles.forEach(function(article,
+            index) { %>
+            <a href="<%- article.url %>" class="news__card" target="_blank">
+                <img src="<%- article.urlToImage %>" alt="" />
+                <h2><%- article.title %></h2>
+                <p><%- article.description %></p>
+            </a>
+            <% }) %> <% } else { %> No posts found. <% } %>
+        </div>
+    </div>
+</body>
+
+<%- include('./partials/footer.ejs') %>

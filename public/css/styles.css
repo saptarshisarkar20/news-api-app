@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;1,400&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+body {
+    margin: 0;
+    /* font-family: "Josefin Sans", "Source Sans Pro", sans-serif; */
+    /* background-color: #f6f6f6; */
+    /* background-color: #012835; */
+    background-color: #212529;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-family: "Philosopher";
+}
+
+.myweb {
+    background-color: rgb(24, 241, 231);
+    margin: unset;
+    font-weight: "Philosopher";
+    font-weight: bolder;
+    color: rgb(136, 0, 27);
+    animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+    background-color: #10555a;
+    margin-bottom: 10px;
+    font-size: larger;
+    margin-bottom: 20px;
+}
+
+.header__search input[type="text"] {
+    padding: 6px;
+    border: none;
+}
+
+.header__search input[type="submit"] {
+    float: right;
+    padding: 6px 10px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(25, 255, 140);
+    font-weight: bold;
+}
+
+.wrapper {
+    padding: 0 1rem;
+}
+
+.news {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(360px, 1fr)) [auto-fill];
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    grid-gap: 2rem;
+}
+
+.news__card {
+    text-decoration: none;
+    color: #080808;
+    /* background-color: #fff; */
+    padding: 20px;
+    background-color: #e7e7e7;
+    border-radius: 15px;
+    box-shadow: 0px 0px 17px 0px rgb(8, 241, 218);
+    font-family: "Josefin Sans", "Source Sans Pro", sans-serif;
+    font-size: large;
+    margin-top: 10 px;
+}
+
+.news__card:hover {
+    -webkit-box-shadow: 0 6px 6px rgb(255, 251, 0), 0 6px 6px rgb(251, 255, 0);
+    box-shadow: 0 9px 9px rgb(255, 238, 0), 0 9px 9px rgb(238, 255, 0);
+    background-color: crimson;
+    color: aliceblue;
+}
+
+.news-single {
+    background-color: #fff;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+/*# sourceMappingURL=styles.css.map */
