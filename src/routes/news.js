@@ -7,8 +7,8 @@ require("dotenv").config();
 newsRouter.get("", async (req, res) => {
     try {
         const newsAPI = await axios.get(
-            // `https://newsapi.org/v2/top-headlines?country=in&apiKey=${process.env.API_KEY}`
-            `https://news-api-sayak.herokuapp.com/getNews/top-headlines?country=in&apiKey=${process.env.API_KEY}`
+            `https://newsapi.org/v2/top-headlines?country=in&apiKey=${process.env.API_KEY}`
+            // `https://news-api-sayak.herokuapp.com/getNews/top-headlines?country=in&apiKey=${process.env.API_KEY}`
         );
         // console.log(newsAPI.data.articles);
         var articles = newsAPI.data.articles;
@@ -52,8 +52,8 @@ newsRouter.post("", async (req, res) => {
     let search = req.body.search;
     try {
         const newsAPI = await axios.get(
-            // `https://newsapi.org/v2/everything?q=${search}&apiKey=${process.env.API_KEY}`
-            `https://news-api-sayak.herokuapp.com/getNews/everything?q=${search}&apiKey=${process.env.API_KEY}`
+            `https://newsapi.org/v2/everything?q=${search}&apiKey=${process.env.API_KEY}`
+            // `https://news-api-sayak.herokuapp.com/getNews/everything?q=${search}&apiKey=${process.env.API_KEY}`
         );
         var articles = newsAPI.data.articles;
         let filteredArticle = articles.map((article) => {
